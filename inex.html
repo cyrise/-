@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>About 陈厌</title>
+<meta name="author" content="Cyrise">
+<meta name="keywords" content="关于">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<link href="http://om929mifs.bkt.clouddn.com/shu.pngv" rel="shortcut icon">
+<link rel="icon" type="image/png" href="http://om929mifs.bkt.clouddn.com/shu.png" sizes="128x128" />
+<!-- Javascript -->
+<!--[if lt IE 9]>
+<script src="http://om929mifs.bkt.clouddn.com/html5shiv.min.js"></script>
+<![endif]-->
+<style>html,body{height:100%;width:100%}body{display:table;margin:0;font:13px/1.65 "Segoe UI","Helvetica Neue",Helvetica,Arial,"Hiragino Kaku Gothic Pro","Meiryo","Hiragino Sans GB","Microsoft YaHei","STHeiti","SimSun",Sans-serif}a{color:#777;text-decoration:none}a:hover{color:#15C}section,footer{display:table-row}section{height:95%}footer{height:5%}span{display:table-cell;text-align:center;vertical-align:middle}</style>
+</head>
+<body>
+  <section>
+    <span id="hitokoto"></span>
+  </section>
+  <footer>
+    <span>© <a href="http://xn--pmrx66m.cn/" rel="author">Cyrise</a>. 陈厌的自留地</span>
+  </footer>
+    <script>
+   var hitokotos = [
+    '陈厌的自留地',
+      '我便是我了',
+      '总有一个人还爱你虔诚的灵魂,爱你苍老的脸上的皱纹',
+      'LET JUSTICE BE DONE, THOUGH THE HEAVENS FALL.',  
+      '四周空无一人好暗 好暗 我独自 沉沦在暗无天日的海底',
+      '不乱于心，不困于情。不畏将来，不念过往。',
+      '恐惧、信仰、爱。',
+      '胸不平何以平天下，乳不巨何以聚人心？！'
+    ];
+    var hitokoto = document.getElementById('hitokoto');
+    var text = hitokotos[Math.floor(Math.random() * hitokotos.length)];
+    var byteLength = function (val) {
+      var len = 0;
+      for (var i = 0; i < val.length; i++)
+        (val[i].match(/[^\x00-\xff]/ig) != null) ? len += 2 : len += 1;
+      return len;
+    }
+    hitokoto.style.fontSize = 10 - Math.ceil(byteLength(text) / ((window.screen.width <= 1280) ? 7 : 10)) + 'em';
+    hitokoto.innerText = "「" + text + "」";
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-26437383-4', 'auto');
+    ga('send', 'pageview');
+  </script>
+</body>
+</html>
